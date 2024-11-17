@@ -1,0 +1,12 @@
+<div>
+    <h1><%= title%></h1>
+    <% messages.forEach((message) => {%>
+        <div style="margin-bottom: 20px; padding: 8px; border: 1px solid black; max-width: max-content;">
+            <span>User: <%= message.user%></span>
+            <p>Text: <%= message.text%></p>
+            <span>Data: <%= message.added%></span>
+            <a href="/messages/<%=message.user%>" style="display: flex; padding: 8px; background-color: rgb(12, 89, 231); border-radius: 8px; color: white; max-width: max-content; text-decoration: none; font-family: sans-serif;">Show</a>
+        </div>
+    <%})%>
+    <a href="/new" style="display: flex; padding: 8px; background-color: rgb(12, 89, 231); border-radius: 8px; color: white; max-width: max-content; text-decoration: none; font-family: sans-serif;">New message</a>
+</div>
